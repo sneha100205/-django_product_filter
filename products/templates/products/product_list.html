@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Product Filter</title>
+</head>
+<body>
+    <h1>Product Filter</h1>
+    <form method="get">
+        <input type="text" name="q" placeholder="Search..." value="{{ request.GET.q }}">
+        <input type="text" name="category" placeholder="Category" value="{{ request.GET.category }}">
+        <input type="number" step="0.01" name="min_price" placeholder="Min Price" value="{{ request.GET.min_price }}">
+        <input type="number" step="0.01" name="max_price" placeholder="Max Price" value="{{ request.GET.max_price }}">
+        <button type="submit">Apply Filters</button>
+    </form>
+
+    <h2>Results:</h2>
+    <ul>
+        {% for product in products %}
+            <li>{{ product.name }} - ${{ product.price }} ({{ product.category }})</li>
+        {% empty %}
+            <li>No products found.</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

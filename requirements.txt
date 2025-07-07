@@ -1,0 +1,7 @@
+
+---
+
+## ✅ `requirements.txt`
+
+```txt
+Django>=5.0,<6.0
