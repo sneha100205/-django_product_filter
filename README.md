@@ -131,5 +131,5 @@ django_product_filter/
 
 ## ✅ Author
 
-Developed by [Your Name]  
+Developed by Sneha Chatwani
 For academic/demo purposes.
